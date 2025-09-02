@@ -27,6 +27,10 @@ spring:
           uri: lb://ms-marca
           predicates:
             - Path=/marca/**
+        - id: ms-cliente
+          uri: lb://ms-cliente
+          predicates:
+            - Path=/cliente/**
 
 
 
