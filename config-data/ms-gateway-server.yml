@@ -25,6 +25,12 @@ spring:
               uri: lb://ms-catalogo
               predicates:
                 - Path=/categoria/**
+
+                - id: ms-marca
+                  uri: lb://ms-marca
+                  predicates:
+                    - Path=/marca/**
+
               # Si tu servicio real no expone /categoria/...:
               # filters:
               #   - StripPrefix=1

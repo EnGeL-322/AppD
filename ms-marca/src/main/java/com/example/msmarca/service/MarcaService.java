@@ -1,13 +1,16 @@
 package com.example.msmarca.service;
 
+
+
 import com.example.msmarca.entity.Marca;
-import org.springframework.data.domain.Page;       // ✅ Spring Data
-import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+import java.util.Optional;
 
 public interface MarcaService {
-    Page<Marca> listar(Pageable pageable, String q);
-    Marca obtener(Long id);
-    Marca crear(Marca m);
-    Marca actualizar(Long id, Marca m);
-    void eliminar(Long id);
+    List<Marca> listar();
+    Optional<Marca> buscarPorId(Integer id);
+    Marca guardar(Marca marca);
+    Marca actualizar(Marca marca);
+    void borrarPorId(Integer id);
 }
